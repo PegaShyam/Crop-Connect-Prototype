@@ -1,0 +1,132 @@
+{% extends 'cc-layout.html' %}
+
+{% block body %}
+
+<section class="home">
+  <div class="centered">
+      An Automated AI Model for Crop Recommendation and Yield Prediction.
+  </div>
+</section>
+
+<section class="features">
+    <p class="p1"> <img src="{{ url_for('static', filename='img/branch.gif') }}" alt="" id="branch"> Features <img src="{{ url_for('static', filename='img/tractor.gif') }}" alt="" id="branch1"> </p></div>
+    
+  <div id="pSlider">
+    <ol id="slider-container" dir="ltr">
+      <li id="slide_1" class="li_slide">
+        <div class="slide-snapper"></div>
+        <div class="centered2">Grow the right crops.</div>
+        <a class="prev_slide" href="#slide_4"></a> <a class="next_slide" href="#slide_2"></a> </li>
+      <li id="slide_2" class="li_slide">
+        <div class="slide-snapper"></div>
+        <div class="centered2">Get the best yield.</div>
+        <a class="prev_slide" href="#slide_1"></a> <a class="next_slide" href="#slide_3"></a> </li>
+      <li id="slide_3" class="li_slide">
+        <div class="slide-snapper"></div>
+        <div class="centered2">Procure better profits.</div>
+        <a class="prev_slide" href="#slide_2"></a> <a class="next_slide" href="#slide_4"></a> </li>
+      <li id="slide_4" class="li_slide">
+        <div  class="slide-snapper"></div>
+        <div class="centered2">Implement the right way to farm.</div>
+        <a class="prev_slide" href="#slide_3"></a> <a class="next_slide" href="#slide_1"></a> </li>
+    </ol>
+  </div>
+  
+  <p class="p2">The Crop Connect project portrays two main features.</p> 
+  
+  <section>
+    <div class="container reveal fade-left">
+      <h2>Crop Recommendation (CRM)</h2>
+      <div class="text-container">
+        <div class="text-box">
+          <h3>What is CRM ?</h3>
+          <p>
+            Suggestions about crops that are given to agriculturalists based on the pH values, types of soil, the nutrient contents present in the soil and other characteristics. The crops planted based on the suggestions yield maximum profit. 
+          </p>
+        </div>
+        <div class="text-box1">
+          <img src="{{ url_for('static', filename='img/agri bg.jpg') }}" alt="" id="slbox">
+        </div>
+        
+        <!-- <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="container reveal fade-right">
+      <h2>Crop Yield Prediction (CYP)</h2>
+      <div class="text-container">
+        <div class="text-box1">
+          <img src="{{ url_for('static', filename='img/agri bg4.jpg') }}" alt="" id="slbox">
+        </div>
+        <div class="text-box">
+          <h3>What is CYP ?</h3>
+          <p>
+            Crop yield prediction is an important aspect of agriculture that helps farmers make informed decisions about their crops. It involves estimating the number of crops that will be produced in a given area based on various factors such as soil type, weather conditions, and crop management practices.
+          </p>
+        </div>
+        
+        <!-- <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="container reveal fade-bottom">
+      <h2>Caption</h2>
+      <div class="text-container">
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  </section>
+
+{% endblock %}

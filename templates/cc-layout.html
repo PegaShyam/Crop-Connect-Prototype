@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-1.css') }}">
+    
+    <script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+</head>
+<body>
+
+<!-- START OF NAVBAR -->
+
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html"><img src="{{ url_for('static', filename='img/CC logo.png') }}" alt="" class="logo1"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="land">Home</a></li>
+                    <li><a href="crm">C R M</a></li>
+                    <li><a href="cyp">C Y P</a></li>
+                    <li><a href="crops">Data</a></li>
+                    <!-- <li><a href="#">Contact</a></li> -->
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+<!-- END OF NAVBAR  -->
+
+{% block body %} {% endblock %}
+
+<!-- START OF FOOTER -->
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <img src="{{ url_for('static', filename='img/CC logo.png') }}" alt="" class="logo2">
+
+      <p class="footer-links">
+        A new way to implement farming.
+      </p>
+
+      <p class="footer-company-name">Crop Connect © 2023</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <p><span>Developed by :</span><br>Hrishikesh Nayak<br>Mayur M Joshi<br>Shyam Prasad M<br>T Prasanna</p>
+      </div>
+
+      
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the project</span>
+        An Automated AI Model for Crop Recommendation and Yield Prediction.
+      </p>
+
+      <div class="footer-icons">
+
+        <!-- <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a> -->
+        <a href="#"><img src="{{ url_for('static', filename='img/github.png') }}" alt="" id="branch2"></i></a>
+
+      </div>
+
+    </div>
+
+  </footer>    
+
+<!-- END OF FOOTER -->
+
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="/js/index.js"></script>
+<script src="/js/slide.js"></script>
+<script src="/js/reveal.js"></script> -->
+
+<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/reveal.js') }}"></script>
+<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/slide.js') }}"></script>
+<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+</body>
+</html>
