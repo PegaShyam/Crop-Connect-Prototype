@@ -188,7 +188,19 @@ def crm():
     title = 'Crop Connect - CRM'
     return render_template('cc-crop.html', title=title)
 
+# render crop yield prediction page
 
+@ app.route('/cyp')
+def cyp():
+    title = 'Crop Connect - CYP'
+    return render_template('cc-yield.html', title=title)
+
+# render list of crops data page
+
+@ app.route('/data')
+def data():
+    title = 'Crop Connect - CRM'
+    return render_template('cc-data.html', title=title)
 
 
 # ===============================================================================================
