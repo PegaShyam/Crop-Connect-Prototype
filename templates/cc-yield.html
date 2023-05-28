@@ -14,7 +14,7 @@
     
     <h2 class="myH2">Determine the yield for the crop that can be grown in your farm.</h2>
     <div class="login-box">
-        <form method="POST" action="{{ url_for('cc_crop_prediction') }}">
+        <form method="POST" action="{{ url_for('YieldPred') }}">
           <div class="user-box">
             <input type="number" name="nitrogen" id="Nitrogen" required="">
             <label>Nitrogen (N)</label>
@@ -34,6 +34,10 @@
           <div class="user-box">
             <input type="number" name="rainfall" id="Rainfall" step="0.0001" required="">
             <label>Rainfall(in mm)</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="area" id="Area" step="0.0001" required="">
+            <label>Area(in hectares)</label>
           </div>
 
 
@@ -65,7 +69,29 @@
           </div>
           
           <br><br>
+          
+          <div class="labelmaker">
+            <label>Crop</label>
+            <br>
+            <select id="selectCrop" name="crop" required>
+              <option>Select Crop</option>
+            </select>
+          </div>
 
+          <br><br>
+
+          <br><br>
+          
+          <div class="labelmaker">
+            <label>Crop</label>
+            <br>
+            <select id="selectSeason" name="season" required>
+              <option>Select Season</option>
+            </select>
+          </div>
+
+          <br><br>
+          
           <button type="submit">
             Predict
           </button>
