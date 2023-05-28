@@ -111,7 +111,6 @@ def land():
     return render_template('cc-index.html', title=title)
 
 # render crop recommendation page
-
 @ app.route('/crm')
 def crm():
     title = 'Crop Connect - CRM'
@@ -206,7 +205,8 @@ def YieldPred():
             data=data+crop+season
             final_data = np.array([data])
             my_prediction = yield_pred_model.predict(final_data)
-            final_prediction = my_prediction[0]
+            final_prediction = my_prediction[0]/area
+
             return render_template('cc-yield-result.html', prediction=final_prediction, title=title)
         else:
 
