@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/style-1.css">
+</head>
+<body>
+    <div class="header1">
+        <img src="/static/img/CC logo.png" alt="">
+        <a href="/data"><div class="backArrow">&#10140;</div></a>
+    </div>
+    <div class="container1">
+        <!-- image box -->
+        <div class="left-div">
+            <img src="/static/img/apple.jpg" alt=""> 
+        </div>
+
+        <!-- info box -->
+        <div class="right-div">
+            <h1>{{ crop }}</h1>
+            <hr>
+            <p>{{ crop_info_1 }}</p> 
+            <p>{{ crop_info_2 }}</p>
+            <!-- <p>{{ crop_info_3 }}</p> -->
+        </div>
+
+        <!-- summary box -->
+        <div class="left-div1">
+            <h2>Summary</h2>
+            <hr>
+            <p><b>Type of crop</b> : </p> 
+            <p><b>Ideal pH</b> :</p>
+            <p><b>Ideal Soil type</b> :</p>
+            <p><b>Ideal Humidity</b> :</p>
+            <p><b>Ideal Temperature(in °C)</b> :</p>
+            <p><b>Ideal Rainfall(in mm)</b> :</p>
+            <p><b>Ideal Season</b> :</p>
+        </div>
+    </div>
+</body>
+</html>

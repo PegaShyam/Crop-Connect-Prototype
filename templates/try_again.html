@@ -1,6 +1,6 @@
-{% extends 'layout.html' %} {% block body %}
+{% extends 'cc-layout.html' %} 
 
-
+{% block body %}
 
 
 <div class="container py-2 mx-auto my-50 h-10 text-center" style="margin: 9rem;">
@@ -11,7 +11,7 @@
             currently. <br> Please try again</b></h1>
 
 
-        <a href="{{ url_for('home') }}">
+        <a href="/">
           <button type="submit" class="btn btn-info text-center" style="
         color: black;
         font-weight: bold;
@@ -23,4 +23,5 @@
     </div>
   </div>
 </div>
+
 {% endblock %}

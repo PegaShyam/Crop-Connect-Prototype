@@ -130,6 +130,66 @@ def data():
     title = 'Crop Connect - CRM'
     return render_template('cc-data.html', title=title)
 
+#error page
+
+@ app.route('/error')
+def error():
+    title = 'Crop Connect - Error'
+    return render_template('try_again.html', title=title)
+
+# ===============================================================================================
+
+# CROP DATA ROUTING
+
+@ app.route('/apple')
+def apple():
+    title = 'Crop Connect - Apple'
+    return render_template('1-apple.html', title=title)
+
+@ app.route('/banana')
+def banana():
+    title = 'Crop Connect - Banana'
+    return render_template('2-banana.html', title=title)
+
+@ app.route('/blackgram')
+def blackgram():
+    title = 'Crop Connect - Blackgram'
+    return render_template('3-blackgram.html', title=title)
+
+@ app.route('/chickpea')
+def chickpea():
+    title = 'Crop Connect - Chickpea'
+    return render_template('4-chickpea.html', title=title)
+
+@ app.route('/coconut')
+def coconut():
+    title = 'Crop Connect - Coconut'
+    return render_template('5-coconut.html', title=title)
+
+@ app.route('/coffee')
+def coffee():
+    title = 'Crop Connect - Coffee'
+    return render_template('6-coffee.html', title=title)
+
+@ app.route('/cotton')
+def cotton():
+    title = 'Crop Connect - Cotton'
+    return render_template('7-cotton.html', title=title) 
+
+# Either add more or dynamic
+
+@ app.route('/dynacrop')
+def dynacrop():
+    title = 'Crop Connect - {{crop}}'
+    return render_template('cc-dynacrop.html', title=title)   
+
+# FAQ page
+
+@ app.route('/faq')
+def faq():
+    title = 'Crop Connect - FAQ'
+    return render_template('cc-faq.html', title=title) 
+
 
 # ===============================================================================================
 
