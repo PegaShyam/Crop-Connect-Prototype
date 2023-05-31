@@ -20,7 +20,7 @@ crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
 
-yield_pred_model_path= 'models\Yield-pred-model.pkl'
+yield_pred_model_path= 'models\Yield-pred-model-final.pkl'
 yield_pred_model = pickle.load(
     open(yield_pred_model_path, 'rb'))
 
@@ -230,15 +230,12 @@ def cc_crop_prediction():
 @ app.route('/yield-prediction', methods=['POST'])
 def YieldPred():
  title = 'Crop Connect - Crop Yield Prediction'
- crop_list=["apple", "banana", "blackgram", "chickpea", "coconut",
+ crop_list=["apple", "banana", "blackgram", "coconut",
                                  "coffee", "cotton", "grapes", "jute", "kidneybeans",
                                  "lentil", "maize", "mango", "mothbeans", "mungbean",
                                  "muskmelon", "orange", "papaya", "pigeonpeas",
                                  "pomegranate", "rice", "watermelon"]
- season_list=['autumn', 'kharif', 'rabi',
-                'summer', 'whole year', 'winter']
- crop=[0]*22
- season=[0]*6
+ crop=[0]*21
  if request.method == 'POST':
         data=[]
         N = int(request.form['nitrogen'])
@@ -248,9 +245,7 @@ def YieldPred():
         area = float(request.form['area'])
         rainfall = float(request.form['rainfall'])
         crp=request.form.get("crop")
-        sea=request.form.get("season")
         crop[crop_list.index(crp)]=1
-        season[season_list.index(sea)]=1
         city = request.form.get("city")
         if weather_fetch(city) != None:
             temperature, humidity = weather_fetch(city)
@@ -262,7 +257,7 @@ def YieldPred():
             data.append(ph)
             data.append(rainfall)
             data.append(area)
-            data=data+crop+season
+            data=data+crop
             final_data = np.array([data])
             my_prediction = yield_pred_model.predict(final_data)
             final_prediction = my_prediction[0]/area
