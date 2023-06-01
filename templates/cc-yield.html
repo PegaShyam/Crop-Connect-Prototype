@@ -18,27 +18,27 @@
     <div class="login-box">
         <form method="POST" action="{{ url_for('YieldPred') }}">
           <div class="user-box">
-            <input type="number" name="nitrogen" id="Nitrogen" required="">
+            <input type="number" name="nitrogen" id="Nitrogen" required="" min="0" max="125">
             <label>Nitrogen (N)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="phosphorous" id="Phosphorous" required="">
+            <input type="number" name="phosphorous" id="Phosphorous" required="" min="0" max="125" >
             <label>Phosphorus (P)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="pottasium" id="Potassium"  required="">
+            <input type="number" name="pottasium" id="Potassium"  required="" min="0" max="125">
             <label>Pottasium (K)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="ph" id="ph" step="0.0001" required="">
+            <input type="number" name="ph" id="ph" step="0.0001" required="" min="0" max="10">
             <label>pH level</label>
           </div>
           <div class="user-box">
-            <input type="number" name="rainfall" id="Rainfall" step="0.0001" required="">
+            <input type="number" name="rainfall" id="Rainfall" step="0.0001" required="" min="0" max="500">
             <label>Rainfall(in mm)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="area" id="Area" step="0.0001" required="">
+            <input type="number" name="area" id="Area" step="0.0001" required="" min="30" max="400">
             <label>Area(in hectares)</label>
           </div>
 
