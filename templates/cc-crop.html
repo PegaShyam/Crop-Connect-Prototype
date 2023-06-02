@@ -20,23 +20,23 @@
     <div class="login-box">
         <form method="POST" action="{{ url_for('cc_crop_prediction') }}">
           <div class="user-box">
-            <input type="number" name="nitrogen" id="Nitrogen" required max="500" min="0">
+            <input type="number" name="nitrogen" id="Nitrogen" required max="125" min="0">
             <label>Nitrogen (N)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="phosphorous" id="Phosphorous" required>
+            <input type="number" name="phosphorous" id="Phosphorous" required max="125" min="0">
             <label>Phosphorus (P)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="pottasium" id="Potassium"  required>
+            <input type="number" name="pottasium" id="Potassium"  required max="125" min="0">
             <label>Pottasium (K)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="ph" id="ph" step="0.0001" required max="10" min="0">
+            <input type="number" name="ph" id="ph" step="0.0001" required max="14" min="0">
             <label>pH level</label>
           </div>
           <div class="user-box">
-            <input type="number" name="rainfall" id="Rainfall" step="0.0001" required >
+            <input type="number" name="rainfall" id="Rainfall" step="0.0001" required min="0" max="500">
             <label>Rainfall(in mm)</label>
           </div>
 
