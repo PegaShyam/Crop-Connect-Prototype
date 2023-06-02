@@ -8,6 +8,7 @@ import requests
 import pickle
 import io
 import torch
+import math
 from torchvision import transforms
 # ==============================================================================================
 
@@ -176,6 +177,82 @@ def cotton():
     title = 'Crop Connect - Cotton'
     return render_template('7-cotton.html', title=title) 
 
+@ app.route('/grapes')
+def grapes():
+    title = 'Crop Connect - Grapes'
+    return render_template('8-grapes.html', title=title) 
+
+@ app.route('/jute')
+def jute():
+    title = 'Crop Connect - Jute'
+    return render_template('9-jute.html', title=title)
+
+
+@ app.route('/kidneybeans')
+def kidneybeans():
+    title = 'Crop Connect - Kidneybeans'
+    return render_template('10-kidneybeans.html', title=title)
+
+@ app.route('/lentil')
+def lentil():
+    title = 'Crop Connect - Lentil'
+    return render_template('11-lentil.html', title=title)
+
+@ app.route('/maize')
+def maize():
+    title = 'Crop Connect - Maize'
+    return render_template('12-maize.html', title=title)
+
+@ app.route('/mango')
+def mango():
+    title = 'Crop Connect - Mango'
+    return render_template('13-mango.html', title=title)
+
+@ app.route('/mothbeans')
+def mothbeans():
+    title = 'Crop Connect - Mothbeans'
+    return render_template('14-mothbeans.html', title=title)
+
+@ app.route('/mungbean')
+def mungbean():
+    title = 'Crop Connect - Mungbean'
+    return render_template('15-mungbean.html', title=title)
+
+@ app.route('/muskmelon')
+def muskmelon():
+    title = 'Crop Connect - Muskmelon'
+    return render_template('16-muskmelon.html', title=title)
+
+@ app.route('/orange')
+def orange():
+    title = 'Crop Connect - Orange'
+    return render_template('17-orange.html', title=title)
+
+@ app.route('/papaya')
+def papaya():
+    title = 'Crop Connect - Papaya'
+    return render_template('18-papaya.html', title=title)
+
+@ app.route('/pigeonpeas')
+def pigeonpeas():
+    title = 'Crop Connect - Pigeonpeas'
+    return render_template('19-pigeonpeas.html', title=title)
+
+@ app.route('/pomegranate')
+def pomegranate():
+    title = 'Crop Connect - pomegranate'
+    return render_template('20-pomegranate.html', title=title)
+
+@ app.route('/rice')
+def rice():
+    title = 'Crop Connect - Rice'
+    return render_template('21-rice.html', title=title)
+
+@ app.route('/watermelon')
+def watermelon():
+    title = 'Crop Connect - Watermelon'
+    return render_template('22-watermelon.html', title=title)
+
 # Either add more or dynamic
 
 @ app.route('/dynacrop')
@@ -221,7 +298,7 @@ def cc_crop_prediction():
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
 
-            return render_template('cc-crop-result.html', prediction=final_prediction, title=title)
+            return render_template('cc-crop-result2.html', prediction=final_prediction, title=title)
 
         else:
 
@@ -262,7 +339,7 @@ def YieldPred():
             my_prediction = yield_pred_model.predict(final_data)
             final_prediction = my_prediction[0]/area
 
-            return render_template('cc-yield-result.html', prediction=final_prediction, title=title)
+            return render_template('cc-yield-result2.html', crop_val=crp, my_prediction=round(my_prediction[0],3) , prediction=round(final_prediction,3), title=title)
         else:
 
             return render_template('try_again.html', title=title) 
