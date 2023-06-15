@@ -1,22 +1,11 @@
-{% extends 'cc-layout.html' %} {% block body %}
+{% extends 'cc-layout.html' %} 
 
-<section class="home">
-    <div class="centered">
-        Crop Recommendation.
-        <br>
-        C R M
-    </div>
-</section>
+{% block body %}
 
-<div style="height: 1000px" class="poof">
+<img src="/static/img/agri bg3.jpg" alt="" class="img1"><img src="/static/img/agri bg8.jpg" alt="" class="img2"><p class="centered" id="title1">Crop Recommendation <br> C R M</p>
 
-  <!-- <div id='stars'></div>
-  <div id='stars2'></div>
-  <div id='stars3'></div> -->
-    
     <h2 class="myH2">Determine which crop would be best to plant in your farm.</h2>
 
-  
     <div class="login-box">
         <form method="POST" action="{{ url_for('cc_crop_prediction') }}">
           <div class="user-box">
@@ -32,11 +21,11 @@
             <label>Pottasium (K)</label>
           </div>
           <div class="user-box">
-            <input type="number" name="ph" id="ph" step="0.0001" required max="14" min="0">
+            <input type="number" name="ph" id="ph" step="0.01" required max="14" min="0">
             <label>pH level</label>
           </div>
           <div class="user-box">
-            <input type="number" name="rainfall" id="Rainfall" step="0.0001" required min="0" max="500">
+            <input type="number" name="rainfall" id="Rainfall" step="0.01" required min="0" max="500">
             <label>Rainfall(in mm)</label>
           </div>
 
@@ -76,7 +65,7 @@
           
         </form>
     </div>
-  
-</div>
+    
+    <div style="height:150px"></div>
 
 {% endblock %}

@@ -10,7 +10,7 @@
 <body>
     <div class="header1">
         <img src="/static/img/CC logo.png" alt="">
-        <a href="/data"><div class="backArrow">&#10140;</div></a>
+        <a href="/crm"><div class="backArrow">&#10140;</div></a>
     </div>
     <div class="container1">
         <!-- image box -->
@@ -20,14 +20,18 @@
 
         <!-- info box -->
         <div class="right-div2">
-            <h1>Crop Recommendation Result</h1>
-            <hr>
-            <p>You are recommended to grow <b><span style="text-transform: uppercase; color:rgb(12, 97, 35); font-size: 30px; text-decoration: underline;">{{ prediction }}</span></b> in your farm.</p>
+            <h1 class="result-h1">Crop Recommendation Result</h1>
+            <hr><br>
+            <p>You are recommended to grow <b><span style="text-transform: uppercase; color:green; font-size: 30px; text-decoration: underline;">{{ prediction }}</span></b> in your farm.</p>
             <br>
-            <a href="{{prediction}}" class="result-button">More Information -></a>
+            <a href="{{prediction}}" class="result-button">More Information</a>
             <br>
             <!-- <p style="font-size: 16px;">Press this button for more information on this crop.</p> -->
             <!-- <p>{{ crop_info_3 }}</p> -->
+        </div>
+
+        <div class="left-div3">
+            <img src="/static/img/{{prediction}}.jpg" alt=""> 
         </div>
 
         

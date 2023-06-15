@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+
     <link rel="stylesheet" href="/static/css/style-1.css">
 </head>
 <body>
     <div class="header1">
         <img src="/static/img/CC logo.png" alt="">
-        <a href="/data"><div class="backArrow">&#10140;</div></a>
+        <a href="/cyp"><div class="backArrow">&#10140;</div></a>
     </div>
     <div class="container1">
         <!-- image box -->
@@ -20,11 +21,15 @@
 
         <!-- info box -->
         <div class="right-div2">
-            <h1>Yield Prediction Result</h1>
-            <hr>
+            <h1 class="result-h1">Yield Prediction Result</h1>
+            <hr><br>
             <p>The estimated yield is <b>{{ prediction }} quintal/hectare</b> for the crop <b><span style="text-transform: uppercase;">{{ crop_val }}</span></b>.</p>
             <p>The production value is <b>{{ my_prediction }} quintals</b>.</p>
             <!-- <p>{{ crop_info_3 }}</p> -->
+        </div>
+
+        <div class="left-div3">
+            <img src="/static/img/{{crop_val}}.jpg" alt=""> 
         </div>
 
         

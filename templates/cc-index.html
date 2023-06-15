@@ -2,138 +2,189 @@
 
 {% block body %}
 
-<section class="home">
-  <div class="centered">
-      An Automated AI Model for Crop Recommendation and Yield Prediction.
-  </div>
-</section>
+<img src="/static/img/agri bg3.jpg" alt="" class="img1"><img src="/static/img/agri bg8.jpg" alt="" class="img2"><p class="centered" id="title1">An Automated ML Approach for Crop Recommendation and Yield Prediction.</p>
 
-<section class="features">
-    <p class="p1"> <img src="{{ url_for('static', filename='img/branch.gif') }}" alt="" id="branch"> Features <img src="{{ url_for('static', filename='img/tractor.gif') }}" alt="" id="branch1"> </p></div>
+    <p class="p1"> <img src="/static/img/branch.gif" alt="" id="branch"> Features <img src="/static/img/tractor.gif" alt="" id="branch1"> </p>
+
+    <!-- <p style="font-size:45px; color:lime; text-align: center; font-weight:600;">Features</p> -->
+
+    <!-- carousel -->
+    <div id="pSlider">
+      <ol id="slider-container" dir="ltr">
+        <li id="slide_1" class="li_slide">
+          <div class="slide-snapper"></div>
+          <div class="centered2">Grow the right crops.</div>
+          <a class="prev_slide" href="#slide_4"></a> <a class="next_slide" href="#slide_2"></a> </li>
+        <li id="slide_2" class="li_slide">
+          <div class="slide-snapper"></div>
+          <div class="centered2">Get the best yield.</div>
+          <a class="prev_slide" href="#slide_1"></a> <a class="next_slide" href="#slide_3"></a> </li>
+        <li id="slide_3" class="li_slide">
+          <div class="slide-snapper"></div>
+          <div class="centered2">Procure better profits.</div>
+          <a class="prev_slide" href="#slide_2"></a> <a class="next_slide" href="#slide_4"></a> </li>
+        <li id="slide_4" class="li_slide">
+          <div  class="slide-snapper"></div>
+          <div class="centered2">Implement the right way to farm.</div>
+          <a class="prev_slide" href="#slide_3"></a> <a class="next_slide" href="#slide_1"></a> </li>
+      </ol>
+    </div>
+      
+      <!-- <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span> 
+      </div> -->
+    <!-- end of carousel -->
+
+    <p class="p2">The Crop Connect project portrays two main features.</p>
     
-  <div id="pSlider">
-    <ol id="slider-container" dir="ltr">
-      <li id="slide_1" class="li_slide">
-        <div class="slide-snapper"></div>
-        <div class="centered2">Grow the right crops.</div>
-        <a class="prev_slide" href="#slide_4"></a> <a class="next_slide" href="#slide_2"></a> </li>
-      <li id="slide_2" class="li_slide">
-        <div class="slide-snapper"></div>
-        <div class="centered2">Get the best yield.</div>
-        <a class="prev_slide" href="#slide_1"></a> <a class="next_slide" href="#slide_3"></a> </li>
-      <li id="slide_3" class="li_slide">
-        <div class="slide-snapper"></div>
-        <div class="centered2">Procure better profits.</div>
-        <a class="prev_slide" href="#slide_2"></a> <a class="next_slide" href="#slide_4"></a> </li>
-      <li id="slide_4" class="li_slide">
-        <div  class="slide-snapper"></div>
-        <div class="centered2">Implement the right way to farm.</div>
-        <a class="prev_slide" href="#slide_3"></a> <a class="next_slide" href="#slide_1"></a> </li>
-    </ol>
-  </div>
-  
-  <p class="p2">The Crop Connect project portrays two main features.</p> 
-  
-  <section>
-    <div class="container reveal fade-left">
-      <h2>Crop Recommendation (CRM)</h2>
-      <div class="text-container">
-        <div class="text-box">
-          <h3>What is CRM ?</h3>
-          <p>
-            Crop Recommendation is suggestions about crops that are given to agriculturalists based on the pH values, types of soil, the nutrient contents present in the soil and other characteristics. The crops planted based on the suggestions yield maximum profit. 
-          </p>
-        </div>
-        <div class="text-box1">
-          <img src="{{ url_for('static', filename='img/agri bg.jpg') }}" alt="" id="slbox">
-        </div>
-        
-        <!-- <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            eius molestiae perferendis eos provident vitae iste.
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            eius molestiae perferendis eos provident vitae iste.
-          </p>
-        </div> -->
-      </div>
-    </div>
-  </section>
-  
-  <section>
-    <div class="container reveal fade-right">
-      <h2>Crop Yield Prediction (CYP)</h2>
-      <div class="text-container">
-        <div class="text-box1">
-          <img src="{{ url_for('static', filename='img/agri bg4.jpg') }}" alt="" id="slbox">
-        </div>
-        <div class="text-box">
-          <h3>What is CYP ?</h3>
-          <p>
-            Crop yield prediction is an important aspect of agriculture that helps farmers make informed decisions about their crops. It involves estimating the number of crops that will be produced in a given area based on various factors such as soil type, weather conditions, and crop management practices.
-          </p>
-        </div>
-        
-        <!-- <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            eius molestiae perferendis eos provident vitae iste.
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            eius molestiae perferendis eos provident vitae iste.
-          </p>
-        </div> -->
-      </div>
-    </div>
-  </section>
-  
-  <section>
-    <div class="container reveal fade-bottom">
-      <h2>How to Use?</h2>
-      <div class="text-container">
-        <div class="text-box3">
-          <h3>Crop Recommendation</h3>
-          <p>
-            1. Test your soil for the nutrients and find out the N, P and K values of it and enter the values (mg/kg).
-            <br><br>
-            2. Enter the other important parameters relevant to ur farm accordingly as well.
-            <br><br>
-            3. Submit the form to be redirected to the result page where the prediction of the ideal crop to be grown in your farm is recommended.
-          </p>
-        </div>
-        <div class="text-box3">
-          <h3>Crop Yield Prediction</h3>
-          <p>
-            1. Test your soil for the nutrients and find out the N, P and K values of it and enter the values (mg/kg).
-            <br><br>
-            2. Enter the other important parameters relevant to your farm accordingly as well.
-            <br><br>
-            3. Submit the form to be redirected to the result page where yield of the crop chosen to grow in your farm is predicted. 
-          </p>
-        </div>
-        <div class="text-box3">
-          <h3>View Crop Information</h3>
-          <p>
-            Find the crop you want to view detailed information on and click on it.
-            <br><br>
-            It will redirect to a detailed information page on the crop.
-          </p>
+    <!-- desktop view -->
+    <section class="revealbox">
+      <div class="container reveal fade-left">
+        <h2>Crop Recommendation (CRM)</h2>
+        <div class="text-container">
+          <div class="text-box">
+            <h3>What is CRM ?</h3>
+            <p>
+              Crop Recommendation is suggestions about crops that are given to agriculturalists based on the pH values, types of soil, the nutrient contents present in the soil and other characteristics. The crops planted based on the suggestions yield maximum profit. 
+            </p>
+          </div>
+          <div class="text-box1">
+            <img src="/static/img/agri bg.jpg" alt="" id="slbox">
+          </div>
+          
+          <!-- <div class="text-box">
+            <h3>Section Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3>Section Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste.
+            </p>
+          </div> -->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    
+    <section class="revealbox">
+      <div class="container reveal fade-right">
+        <h2>Crop Yield Prediction (CYP)</h2>
+        <div class="text-container">
+          <div class="text-box1">
+            <img src="/static/img/agri bg4.jpg" alt="" id="slbox">
+          </div>
+          <div class="text-box">
+            <h3>What is CYP ?</h3>
+            <p>
+              Crop yield prediction is an important aspect of agriculture that helps farmers make informed decisions about their crops. It involves estimating the number of crops that will be produced in a given area based on various factors such as soil type, weather conditions, and crop management practices.
+            </p>
+          </div>
+          
+          <!-- <div class="text-box">
+            <h3>Section Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3>Section Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eius molestiae perferendis eos provident vitae iste.
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    
+    <section class="revealbox">
+      <div class="container reveal fade-bottom">
+        <h2>How to Use?</h2>
+        <div class="text-container">
+          <div class="text-box3">
+            <h3>Crop Recommendation</h3>
+            <p>
+              1. Test your soil for the nutrients and find out the N, P and K values of it and enter the values (mg/kg).
+              <br><br>
+              2. Enter the other important parameters relevant to ur farm accordingly as well.
+              <br><br>
+              3. Submit the form to be redirected to the result page where the prediction of the ideal crop to be grown in your farm is recommended.
+            </p>
+          </div>
+          <div class="text-box3">
+            <h3>Crop Yield Prediction</h3>
+            <p>
+              1. Test your soil for the nutrients and find out the N, P and K values of it and enter the values (mg/kg).
+              <br><br>
+              2. Enter the other important parameters relevant to your farm accordingly as well.
+              <br><br>
+              3. Submit the form to be redirected to the result page where yield of the crop chosen to grow in your farm is predicted. 
+            </p>
+          </div>
+          <div class="text-box3">
+            <h3>View Crop Information</h3>
+            <p>
+              Find the crop you want to view detailed information on and click on it.
+              <br><br>
+              It will redirect to a detailed information page on the crop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </section>
+    <!-- mobile view -->
+    <div class="wrapper">
+      <div class="card">
+        <h3 class="card-title">Crop Recommendation</h3>
+        <h3 class="card-title">C R M</h3>
+        <hr><br>
+          <p class="card-content">Crop Recommendation is suggestions about crops that are given to agriculturalists based on the pH values, types of soil, the nutrient contents present in the soil and other characteristics. The crops planted based on the suggestions yield maximum profit.</p>
+          <br>
+          <button class="card-btn">TRY NOW</button>
+        </div>
+      <div class="card">
+        <h3 class="card-title">Crop Yield Prediction</h3>
+        <h3 class="card-title">C Y P</h3>
+        <hr><br>
+          <p class="card-content">Crop yield prediction is an important aspect of agriculture that helps farmers make informed decisions about their crops. It involves estimating the number of crops that will be produced in a given area based on various factors such as soil type, weather conditions, and crop management practices.</p>
+          <br>
+          <button class="card-btn">TRY NOW</button>
+        </div>
+      <div class="card">
+          <h3 class="card-title">How to Use?</h3>
+          <h3 class="card-title">Instructions:</h3>
+          <hr><br>
+            <p class="card-content">1. Test your soil for the nutrients and find out the N, P and K values of it and enter the values (mg/kg).
+              <br><br>
+              2. Enter the other important parameters relevant to ur farm accordingly as well.
+              <br><br>
+              3. For <b>CRM</b>, Submit the form to be redirected to the result page where the prediction of the ideal crop to be grown in your farm is recommended and further option to view detailed information on that crop is available.
+              <br><br>
+              4. For <b>CYP</b>, Submit the form to be redirected to the result page where yield of the crop chosen to grow in your farm is predicted.
+              <br><br>
+              5. To view crop information, find the crop you want to view detailed information on and click on it.
+              <br><br>
+              6. It will redirect to a detailed information page on the crop.
+              <br><br>
+              7. Check out the FAQ page to view the frequently asked questions.
+            </p>
+            <br>
+            <!-- <button class="card-btn">TRY NOW</button> -->
+          </div>  
+
+    </div>
+
+
+    <!-- <div class="box1">
+    </div> -->
 
 {% endblock %}
