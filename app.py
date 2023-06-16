@@ -37,7 +37,7 @@ def weather_fetch(city_name):
     :params: city_name
     :return: temperature, humidity
     """
-    base_url="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/%22+city_name+%22?key=C4KHAUSYXVKSS2565PV7MDC5T"
+    base_url="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/%22"+city_name+"%22?key=C4KHAUSYXVKSS2565PV7MDC5T"
     response=requests.get(base_url)
     x = response.json()
     y=x['days']
