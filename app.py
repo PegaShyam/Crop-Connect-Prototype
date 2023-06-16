@@ -6,6 +6,7 @@ import pandas as pd
 import statistics as st
 import requests
 import pickle
+import sys
 import io
 import torch
 import math
@@ -32,11 +33,6 @@ yield_pred_model = pickle.load(
 
 
 def weather_fetch(city_name):
-    """
-    Fetch and returns the temperature and humidity of a city
-    :params: city_name
-    :return: temperature, humidity
-    """
     base_url="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/%22"+city_name+"%22?key=C4KHAUSYXVKSS2565PV7MDC5T"
     response=requests.get(base_url)
     x = response.json()
@@ -44,12 +40,28 @@ def weather_fetch(city_name):
     temp=[]
     hum=[]
     for days in y:
-      temp.append((days['tempmax']+days['tempmin'])/2)
-      hum.append(days['humidity'])
+     temp.append((days['tempmax']+days['tempmin'])/2)
+     hum.append(days['humidity'])
+    print(len(hum),hum,file=sys.stderr)
+
     temperature=st.mean(temp)
     temperature=round(((temperature-32)*(5/9)),2)
     humidity=round(st.mean(hum),2)
+# print(temperature, humidity)
     return temperature, humidity
+    # base_url="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/%22+city_name+%22?key=C4KHAUSYXVKSS2565PV7MDC5T"
+    # response=requests.get(base_url)
+    # x = response.json()
+    # y=x['days']
+    # temp=[]
+    # hum=[]
+    # for days in y:
+    #   temp.append((days['tempmax']+days['tempmin'])/2)
+    #   hum.append(days['humidity'])
+    # temperature=st.mean(temp)
+    # temperature=round(((temperature-32)*(5/9)),2)
+    # humidity=round(st.mean(hum),2)
+    # return temperature, humidity
 
     # api_key = config.weather_api_key
     # base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -294,6 +306,7 @@ def cc_crop_prediction():
 
         if weather_fetch(city) != None:
             temperature, humidity = weather_fetch(city)
+            print(temperature,humidity,file=sys.stderr)
             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
