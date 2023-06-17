@@ -2,6 +2,8 @@
 
 {% block body %}
 
+<div class="big-box" style="height:auto; background-image: linear-gradient(135deg, rgb(243,254,246) 0%, rgb(243,254,246) 14.286%,rgb(232,242,235) 14.286%, rgb(232,242,235) 28.572%,rgb(166,254,189) 28.572%, rgb(166,254,189) 42.858%,rgb(62,205,97) 42.858%, rgb(62,205,97) 57.144%,rgb(201,246,212) 57.144%, rgb(201,246,212) 71.43%,rgb(148,230,165) 71.43%, rgb(148,230,165) 85.716%,rgb(255,255,255) 85.716%, rgb(255,255,255) 100.002%);">
+
 <img src="/static/img/agri bg3.jpg" alt="" class="img1"><img src="/static/img/agri bg8.jpg" alt="" class="img2"><p class="centered" id="title1">An Automated ML Approach for Crop Recommendation and Yield Prediction.</p>
 
     <p class="p1"> <img src="/static/img/branch.gif" alt="" id="branch"> Features <img src="/static/img/tractor.gif" alt="" id="branch1"> </p>
@@ -44,9 +46,11 @@
     <section class="revealbox">
       <div class="container reveal fade-left">
         <h2>Crop Recommendation (CRM)</h2>
+        <br>
         <div class="text-container">
           <div class="text-box">
             <h3>What is CRM ?</h3>
+            <br>
             <p>
               Crop Recommendation is suggestions about crops that are given to agriculturalists based on the pH values, types of soil, the nutrient contents present in the soil and other characteristics. The crops planted based on the suggestions yield maximum profit. 
             </p>
@@ -76,12 +80,14 @@
     <section class="revealbox">
       <div class="container reveal fade-right">
         <h2>Crop Yield Prediction (CYP)</h2>
+        <br>
         <div class="text-container">
           <div class="text-box1">
             <img src="/static/img/agri bg4.jpg" alt="" id="slbox">
           </div>
           <div class="text-box">
             <h3>What is CYP ?</h3>
+            <br>
             <p>
               Crop yield prediction is an important aspect of agriculture that helps farmers make informed decisions about their crops. It involves estimating the number of crops that will be produced in a given area based on various factors such as soil type, weather conditions, and crop management practices.
             </p>
@@ -108,9 +114,11 @@
     <section class="revealbox">
       <div class="container reveal fade-bottom">
         <h2>How to Use?</h2>
+        <h2>Instructions:</h2>
         <div class="text-container">
           <div class="text-box3">
             <h3>Crop Recommendation</h3>
+            <br>
             <p>
               1. Test your soil for the nutrients and find out the N, P and K values of it and enter the values (mg/kg).
               <br><br>
@@ -121,6 +129,7 @@
           </div>
           <div class="text-box3">
             <h3>Crop Yield Prediction</h3>
+            <br>
             <p>
               1. Test your soil for the nutrients and find out the N, P and K values of it and enter the values (mg/kg).
               <br><br>
@@ -131,16 +140,19 @@
           </div>
           <div class="text-box3">
             <h3>View Crop Information</h3>
+            <br>
             <p>
-              Find the crop you want to view detailed information on and click on it.
+              1. Find the crop you want to view detailed information on and click on it.
               <br><br>
-              It will redirect to a detailed information page on the crop.
+              2. It will redirect to a detailed information page on the crop.
+              <br><br>
+              3. Also, check out the FAQ page to view the frequently asked questions.
             </p>
           </div>
         </div>
       </div>
     </section>
-
+  </div>
     <!-- mobile view -->
     <div class="wrapper">
       <div class="card">
@@ -149,7 +161,7 @@
         <hr><br>
           <p class="card-content">Crop Recommendation is suggestions about crops that are given to agriculturalists based on the pH values, types of soil, the nutrient contents present in the soil and other characteristics. The crops planted based on the suggestions yield maximum profit.</p>
           <br>
-          <button class="card-btn">TRY NOW</button>
+          <a href="/crm" style="text-decoration: none; color: white;"><button class="card-btn">TRY NOW</button></a>
         </div>
       <div class="card">
         <h3 class="card-title">Crop Yield Prediction</h3>
@@ -157,7 +169,7 @@
         <hr><br>
           <p class="card-content">Crop yield prediction is an important aspect of agriculture that helps farmers make informed decisions about their crops. It involves estimating the number of crops that will be produced in a given area based on various factors such as soil type, weather conditions, and crop management practices.</p>
           <br>
-          <button class="card-btn">TRY NOW</button>
+          <a href="/cyp" style="text-decoration: none; color: white;"><button class="card-btn">TRY NOW</button></a>
         </div>
       <div class="card">
           <h3 class="card-title">How to Use?</h3>
